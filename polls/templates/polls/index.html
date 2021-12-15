@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        
+        <title>Goatsucker Official Website</title>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}">        
+        
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Smooch&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1 class="logo">Goatsucker Official Website</h1>
+            
+                <ul class="header">
+                    <li class="header-list"> <a href="#About" class="header-list">About</a></li>
+                    <li class="header-list"> <a href="#Member" class="header-list">Member</a></li>
+                    <li class="header-list"> <a href="#Live" class="header-list">Live</a></li>
+                    <li class="header-list"> <a href="#Contact" class="header-list">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="image">
+                    <img src="{% static 'polls/img/chupa.jpg' %}" width="100%" height="100%">
+                </div>
+            </div>
+
+            <div id="About" style="padding-top: 100px;">
+                <div class="container" style="padding-top: 100px;">
+                    <h1 class="title">About</h1>
+                    <p class="text">
+                        千葉県松戸市で活動中のロックバンド<br>
+                        <br>
+                          【バンド編成】<br>
+                          Vo. Gt. Ba. Dr. Key.<br>
+                          <br>
+                          【演奏楽曲】<br>
+                          現在はコピーのみやっています。<br>
+                          amazarashi , 感覚ピエロ , Mrs.GreenApple etc...
+
+                    </p>
+                </div>
+              </div>
+
+            <div id="Member" style="padding-top: 100px;">
+                <div class="container" style="padding-top: 100px;">
+                    <h1 class="title">Member</h1>
+                    <div class="content">
+                    <p class="text-left">
+                        <b>Vo. りょーさん</b><br>
+                        <br>
+                        太く芯のあるハイトーンボイスで熱く歌い上げる<br>
+                        ボーカリスト。<br>
+                        トークスキル抜群だが女好き。千葉出身。<br>
+                        <br>
+                        <br>
+                        <b>Gt. だいちゃん</b><br>
+                        <br>
+                        鋭く尖った音色でバンドの花形を担うギタリスト。<br>
+                        カッコつけているが見た目はガリガリ君。大阪出身。<br>
+                        <br>
+                        <br>
+                        <b>Ba. ゆーやん</b><br>
+                        <br>
+                        ファンキーでリズミカルなフレーズでバンドを支える<br>
+                        ベーシスト。<br>
+                        普段は大人しいが話せば毒舌。大阪出身。<br>
+                        <br>
+                        <br>
+                        <b>Dr. よっぴー</b><br>
+                        <br>
+                        常に笑顔で後ろからバンドメンバーを和ませる<br>
+                        ドラマー。<br>
+                        ライブ前に必ず牛乳を飲む習性がある。新潟出身。<br>
+                        <br>
+                        <br>
+                        <b>Key. ふぁなちゃん</b><br>
+                        <br>
+                        バンドメンバー唯一の女性。<br>
+                        多彩な音色でバンドを彩るキーボーディスト。<br>
+                        常にドタバタ天然ドジっ子娘。千葉出身。<br>
+                        <br>
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Live" style="padding-top: 100px;">
+                <div class="container" style="padding-top: 100px;">
+                    <h1 class="title">Live</h1>
+                    <p class="text" style="font-weight: bold;">
+                        2021/2/11(金祝) 新松戸FIREBIRD 昼 <br>
+                        FIREBIRD presents "HOLIDAY ATTACK"<br>
+                    </p>
+                    <p class="text">
+                        【出演】<br>
+                        <br>
+                        Goatsucker<br>
+                        中村エクスプロージョン<br>
+                        29Q<br>
+                        <br>
+                        and more...<br>
+                        <br>
+                        <br>
+                        OPEN 17:00(予定)<br>
+                        START 17:30(予定)<br>
+                        <br>
+                        TICKET 前売\2,000 当日\2,500<br>
+                        <br>
+                        ※1drink(\600) charge<br>
+                        ※START迄に御来場の方は追加1drink present
+                        <br>
+                    </p>
+                </div>
+            </div>
+
+            <div id="Contact" style="padding-top: 100px; padding-bottom: 200px;">
+                <div class="container" style="padding-top: 100px;">
+                    <h1 class="title">Contact</h1>
+                    <p class="text">当バンドへのお問い合わせは下記フォームよりお願い致します</p>
+                    <div class="form">
+                        <form>
+                            <div class="form-group">
+                                <label>氏名</label>
+                                <input type="text" class="form-control" id="name" placeholder="氏名">
+                            </div>
+                            <div class="form-group">
+                              <label>メールアドレス</label>
+                              <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="メールアドレス">
+                            </div>
+                            <div class="form-group">
+                                <label>お問い合わせ内容</label>
+                                <textarea class="form-control" id="content" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">送信</button>
+                          </form>   
+                    </div>                        
+                </div>
+            </div>
+
+        </main>
+      
+    </body>
+</html>

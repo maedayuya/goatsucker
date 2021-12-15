@@ -1,0 +1,94 @@
+/* 全体の設定 */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    background-color: #45424A;
+}
+/* clearfix 要素を横並びにしたい時に使う　*/
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+/* ヘッダー　*/
+header {
+	height: 100px;
+	width: 100%;
+	color: white;
+	margin: 0 auto;
+    font-family: 'Bebas Neue', cursive;
+	position: fixed;
+}
+.logo{
+    color: green;
+    font-size: 50px;
+    font-family: 'Lobster', cursive;
+}
+.header {
+	float: right;
+}
+.header-list {
+	text-decoration: none;
+	color: white;
+	font-size: 30px;
+	list-style: none;
+	padding-right: 30px;
+	line-height: 100px;
+	float: left;
+    font-family: 'Bebas Neue', cursive;
+}
+.header::after{
+	content: "";
+	display: block;
+	background-color: #EC715F;
+	height: 5px;
+	width: 100px;
+	margin: 10px auto;
+}
+
+
+main{
+	padding-top: 200px;
+}
+.title {
+    font-family: 'Bebas Neue', cursive;
+	text-align: center;
+	color: white;
+	font-size: 50px;
+
+}
+.title::after{
+	content: "";
+	display: block;
+	background-color: green;
+	height: 5px;
+	width: 1000px;
+	margin: 10px auto;
+}
+.text {
+	text-align: center;
+	padding: 20px;
+	font-size: 30px;
+	color: white;
+}
+.text-left {
+	text-align: left;
+	padding: 20px;
+	font-size: 30px;
+	color: white;
+}
+.content{
+	width: 70%;
+	margin: 0 auto;
+}
+
+label{
+	color: white;
+}
+.form{
+	width: 50%;
+	margin: 0 auto;
+}
