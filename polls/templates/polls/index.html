@@ -9,7 +9,11 @@
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        
+
+        <script src="https://kit.fontawesome.com/e063d8a1a2.js"></script>
+        <script src="{% static 'polls/js/jquery-3.4.1.min.js' %}"></script>
+        <script src="{% static 'polls/js/script.js' %}"></script>
+    
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -146,7 +150,13 @@
                             </div>
                             <button type="submit" class="btn btn-primary">送信</button>
                           </form>   
-                    </div>                        
+                    </div>
+                    <span id="back">
+                        <a href="#">
+                            <img class="chupakun" src="{% static 'polls/img/chupakun6.jpg' %}">
+                        </a>
+                    </span>
+                                
                 </div>
             </div>
 
