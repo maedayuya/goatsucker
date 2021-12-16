@@ -24,18 +24,34 @@
         <header>
             <div class="container">
                 <h1 class="logo">Goatsucker Official Website</h1>
-            
-                <ul class="header">
-                    <li class="header-list"> <a href="#About" class="header-list">About</a></li>
-                    <li class="header-list"> <a href="#Member" class="header-list">Member</a></li>
-                    <li class="header-list"> <a href="#Live" class="header-list">Live</a></li>
-                    <li class="header-list"> <a href="#Contact" class="header-list">Contact</a></li>
-                </ul>
+                <div id="navArea">
+
+                    <nav>
+                      <div class="inner">
+                        <ul>
+                            <li> <a href="#About">About</a></li>
+                            <li> <a href="#Member">Member</a></li>
+                            <li> <a href="#Live">Live</a></li>
+                            <li> <a href="#Goods">Goods</a></li>
+                            <li> <a href="#Contact">Contact</a></li>
+                        </ul>
+                      </div>
+                    </nav>
+                  
+                    <div class="toggle_btn">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  
+                    <div id="mask"></div>
+                  
+                  </div>
             </div>
         </header>
 
         <main>
-            <div class="container">
+            <div class="container" >
                 <div class="image">
                     <img src="{% static 'polls/img/chupa.jpg' %}" width="100%" height="100%">
                 </div>
@@ -44,9 +60,11 @@
             <div id="About" style="padding-top: 100px;">
                 <div class="container" style="padding-top: 100px;">
                     <h1 class="title">About</h1>
-                    <p class="text">
+                    <p class="text element">
                         千葉県松戸市で活動中のロックバンド<br>
                         <br>
+                    </p>
+                    <p class="text element">
                           【バンド編成】<br>
                           Vo. Gt. Ba. Dr. Key.<br>
                           <br>
@@ -62,7 +80,7 @@
                 <div class="container" style="padding-top: 100px;">
                     <h1 class="title">Member</h1>
                     <div class="content">
-                    <p class="text-left">
+                    <p class="text-left element">
                         <b>Vo. りょーさん</b><br>
                         <br>
                         太く芯のあるハイトーンボイスで熱く歌い上げる<br>
@@ -70,12 +88,16 @@
                         トークスキルも抜群！！メイド好き。千葉出身。<br>
                         <br>
                         <br>
+                    </p>
+                    <p class="text-left element">
                         <b>Gt. だいちゃん</b><br>
                         <br>
                         鋭く尖った音色でバンドの花形を担うギタリスト。<br>
                         カッコつけているが見た目はガリガリ君。大阪出身。<br>
                         <br>
                         <br>
+                    </p>
+                    <p class="text-left element">
                         <b>Ba. ゆーやん</b><br>
                         <br>
                         ファンキーでリズミカルなフレーズでバンドを支える<br>
@@ -83,6 +105,8 @@
                         普段は大人しいが話せば毒舌。大阪出身。<br>
                         <br>
                         <br>
+                    </p>
+                    <p class="text-left element">
                         <b>Dr. よっぴー</b><br>
                         <br>
                         常に笑顔で後ろからバンドメンバーを和ませる<br>
@@ -90,6 +114,8 @@
                         ライブ前に必ず牛乳を飲む習性がある。新潟出身。<br>
                         <br>
                         <br>
+                    </p>
+                    <p class="text-left element">
                         <b>Key. ふぁなちゃん</b><br>
                         <br>
                         バンドメンバー唯一の女性。<br>
@@ -103,12 +129,12 @@
 
             <div id="Live" style="padding-top: 100px;">
                 <div class="container" style="padding-top: 100px;">
-                    <h1 class="title">Live</h1>
-                    <p class="text" style="font-weight: bold;">
-                        2021/2/11(金祝) 新松戸FIREBIRD 昼 <br>
+                    <h1 class="title">Next Live</h1>
+                    <p class="text element" style="font-weight: bold;">
+                        2021/2/11(金祝) 新松戸FIREBIRD<br>
                         FIREBIRD presents "HOLIDAY ATTACK"<br>
                     </p>
-                    <p class="text">
+                    <p class="text element">
                         【出演】<br>
                         <br>
                         Goatsucker<br>
@@ -118,6 +144,8 @@
                         and more...<br>
                         <br>
                         <br>
+                    </p>
+                    <p class="text element">
                         OPEN 17:00(予定)<br>
                         START 17:30(予定)<br>
                         <br>
@@ -130,11 +158,64 @@
                 </div>
             </div>
 
+            <div id="Goods" style="padding-top: 100px;">
+                <div class="container" >
+                    <h1 class="title element">Goods</h1>
+                    <div class="production-group clearfix element">
+                        <div class="production">
+                            <p class="text">
+                                <br>
+                                チュパおくん<br>
+                            </p>
+                            <img src="{% static 'polls/img/tshirt1.jpg' %}" width="100%" height="100%">
+                            <p class="text">価格：3,300円</p>
+                        </div>
+                        <div class="production">
+                            <p class="text">
+                                <br>
+                                チュパこちゃん<br>
+                            </p>
+                            <img src="{% static 'polls/img/tshirt2.jpg' %}" width="100%" height="100%">
+                            <p class="text">価格：3,300円</p>
+                        </div>
+                        <div class="production">
+                            <p class="text">
+                                <br>
+                                チュパ夫妻
+                            </p>
+                            <img src="{% static 'polls/img/tshirt3.jpg' %}" width="100%" height="100%">
+                            <p class="text">価格：3,300円</p>
+                        </div>
+                        <div class="production">
+                            <p class="text">
+                                <br>
+                                宇宙旅行<br>
+                            </p>
+                            <img src="{% static 'polls/img/longTshirt.jpg' %}" width="100%" height="100%">
+                            <p class="text">価格：4,300円</p>
+                        </div>
+                        <div class="production">
+                            <p class="text">
+                                <br>
+                                月面着陸<br>
+                            </p>
+                            <img src="{% static 'polls/img/parker.jpg' %}" width="100%" height="100%">
+                            <p class="text">価格：5,300円</p>
+                        </div>
+                    </div>
+                    <div class="link text">
+                        <div class="link text">
+                        <a href="https://utme.uniqlo.com/">購入はこちらから</a>
+                    </div>                
+                </div>
+            </div>
+
+
             <div id="Contact" style="padding-top: 100px; padding-bottom: 200px;">
                 <div class="container" style="padding-top: 100px;">
                     <h1 class="title">Contact</h1>
-                    <p class="text">当バンドへのお問い合わせは下記フォームよりお願い致します</p>
-                    <div class="form">
+                    <p class="text element">当バンドへのお問い合わせは下記フォームよりお願い致します</p>
+                    <div class="form element">
                         <form>
                             <div class="form-group">
                                 <label>氏名</label>
@@ -153,7 +234,9 @@
                     </div>
                     <span id="back">
                         <a href="#">
-                            <img class="chupakun" src="{% static 'polls/img/chupakun6.jpg' %}">
+                            <img class="chupakun" src="{% static 'polls/img/chupakun.jpg' %}" 
+                            onmouseover="this.src='{% static 'polls/img/rocket.jpg' %}'" 
+                            onmouseout="this.src='{% static 'polls/img/chupakun.jpg' %}'" />
                         </a>
                     </span>
                                 
