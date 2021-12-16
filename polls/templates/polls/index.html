@@ -131,30 +131,27 @@
                 <div class="container" style="padding-top: 100px;">
                     <h1 class="title">Next Live</h1>
                     <p class="text element" style="font-weight: bold;">
-                        2021/2/11(金祝) 新松戸FIREBIRD<br>
-                        FIREBIRD presents "HOLIDAY ATTACK"<br>
+                        {{ data.date }}
+                    </p>
+                    <p class="text element" style="font-weight: bold;">
+                        {{ data.title }}
                     </p>
                     <p class="text element">
-                        【出演】<br>
-                        <br>
-                        Goatsucker<br>
-                        中村エクスプロージョン<br>
-                        29Q<br>
-                        <br>
-                        and more...<br>
-                        <br>
-                        <br>
+                        <span>OPEN:</span>{{ data.open }}
                     </p>
                     <p class="text element">
-                        OPEN 17:00(予定)<br>
-                        START 17:30(予定)<br>
-                        <br>
-                        TICKET 前売\2,000 当日\2,500<br>
-                        <br>
-                        ※1drink(\600) charge<br>
-                        ※START迄に御来場の方は追加1drink present
-                        <br>
+                        <span>START:</span>{{ data.start }}
                     </p>
+                    <p class="text element">
+                        {{ data.ticket }}
+                    </p>
+                    <p class="text element">
+                        {{ data.place }}
+                    </p>
+                    <p class="text element">
+                        <a href="{{ data.link }}">{{ data.link }}</a>
+                    </p>
+
                 </div>
             </div>
 
