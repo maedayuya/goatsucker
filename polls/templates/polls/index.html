@@ -5,7 +5,10 @@
         
         <title>Goatsucker Official Website</title>
 
-        <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}">        
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}">   
+        <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">     
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
@@ -22,10 +25,7 @@
     </head>
     <body>
         <header>
-            <div class="container">
-                <h1 class="logo">Goatsucker Official Website</h1>
                 <div id="navArea">
-
                     <nav>
                       <div class="inner">
                         <ul>
@@ -51,84 +51,44 @@
         </header>
 
         <main>
-            <div class="container" >
+            <div class="container">
+                <h1 class="logo">Goatsucker Official Website</h1>
                 <div class="image">
-                    <img src="{% static 'polls/img/chupa.jpg' %}" width="100%" height="100%">
+                    <img src="{% static 'polls/img/chupa.jpg' %}" width="100%">
                 </div>
             </div>
 
-            <div id="About" style="padding-top: 100px;">
-                <div class="container" style="padding-top: 100px;">
+            <div id="About"> 
+                <div class="container">
                     <h1 class="title">About</h1>
                     <p class="text element">
-                        千葉県松戸市で活動中のロックバンド<br>
-                        <br>
-                    </p>
-                    <p class="text element">
-                          【バンド編成】<br>
-                          Vo. Gt. Ba. Dr. Key.<br>
-                          <br>
-                          【演奏楽曲】<br>
-                          現在はコピーのみやっています。<br>
-                          amazarashi , 感覚ピエロ , Mrs.GreenApple etc...
-
+                        {{ about.text | linebreaksbr  }}
                     </p>
                 </div>
               </div>
 
-            <div id="Member" style="padding-top: 100px;">
-                <div class="container" style="padding-top: 100px;">
+            <div id="Member">
+                <div class="container">
                     <h1 class="title">Member</h1>
-                    <div class="content">
-                    <p class="text-left element">
-                        <b>Vo. りょーさん</b><br>
-                        <br>
-                        太く芯のあるハイトーンボイスで熱く歌い上げる<br>
-                        ボーカリスト。<br>
-                        トークスキルも抜群！！メイド好き。千葉出身。<br>
-                        <br>
-                        <br>
-                    </p>
-                    <p class="text-left element">
-                        <b>Gt. だいちゃん</b><br>
-                        <br>
-                        鋭く尖った音色でバンドの花形を担うギタリスト。<br>
-                        カッコつけているが見た目はガリガリ君。大阪出身。<br>
-                        <br>
-                        <br>
-                    </p>
-                    <p class="text-left element">
-                        <b>Ba. ゆーやん</b><br>
-                        <br>
-                        ファンキーでリズミカルなフレーズでバンドを支える<br>
-                        ベーシスト。<br>
-                        普段は大人しいが話せば毒舌。大阪出身。<br>
-                        <br>
-                        <br>
-                    </p>
-                    <p class="text-left element">
-                        <b>Dr. よっぴー</b><br>
-                        <br>
-                        常に笑顔で後ろからバンドメンバーを和ませる<br>
-                        ドラマー。<br>
-                        ライブ前に必ず牛乳を飲む習性がある。新潟出身。<br>
-                        <br>
-                        <br>
-                    </p>
-                    <p class="text-left element">
-                        <b>Key. ふぁなちゃん</b><br>
-                        <br>
-                        バンドメンバー唯一の女性。<br>
-                        多彩な音色でバンドを彩るキーボーディスト。<br>
-                        常にドタバタ天然ドジっ子娘。千葉出身。<br>
-                        <br>
-                    </p>
+                    {% for mem in member%}
+                    <div class="content" style="margin-bottom: 50px;">
+                        <img class="element" src="{{ mem.image.url }}" style="width: 40%;">
+                        <span class="text-left element">
+                            {{ mem.part }} . {{ mem.name }}
+                        </span>
+                        <p class="text-left element">
+                            {{ mem.profile | linebreaksbr  }}
+                        </p>
+                        <p style="text-align: center;">
+                        <a class="element" href="{{ mem.link }}"><i class="fab fa-twitter fa-4x"></i></a>
+                        </p>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
 
-            <div id="Live" style="padding-top: 100px;">
-                <div class="container" style="padding-top: 100px;">
+            <div id="Live">
+                <div class="container">
                     <h1 class="title">Next Live</h1>
                     <p class="text element" style="font-weight: bold;">
                         {{ data.date }}
@@ -158,57 +118,60 @@
             <div id="Goods" style="padding-top: 100px;">
                 <div class="container" >
                     <h1 class="title element">Goods</h1>
+                    <p class="text element">
+                        UT me!にて公式グッズ販売中！！<br>
+                    </p>
+
                     <div class="production-group clearfix element">
                         <div class="production">
-                            <p class="text">
+                            <p class="p-text">
                                 <br>
-                                チュパおくん<br>
+                                チュパおTシャツ（黒）<br>
                             </p>
                             <img src="{% static 'polls/img/tshirt1.jpg' %}" width="100%" height="100%">
-                            <p class="text">価格：3,300円</p>
+                            <p class="p-text">価格：3,290円</p>
                         </div>
                         <div class="production">
-                            <p class="text">
+                            <p class="p-text">
                                 <br>
-                                チュパこちゃん<br>
+                                チュパ子Tシャツ（黒）<br>
                             </p>
                             <img src="{% static 'polls/img/tshirt2.jpg' %}" width="100%" height="100%">
-                            <p class="text">価格：3,300円</p>
+                            <p class="p-text">価格：3,290円</p>
                         </div>
                         <div class="production">
-                            <p class="text">
+                            <p class="p-text">
                                 <br>
-                                チュパ夫妻
+                                チュパおとチュパ子<br>
+                                Tシャツ（黒）<br>
                             </p>
                             <img src="{% static 'polls/img/tshirt3.jpg' %}" width="100%" height="100%">
-                            <p class="text">価格：3,300円</p>
+                            <p class="p-text">価格：3,290円</p>
                         </div>
                         <div class="production">
-                            <p class="text">
+                            <p class="p-text">
                                 <br>
-                                宇宙旅行<br>
+                                チュパおとチュパ子<br>
+                                ミニトート<br>
                             </p>
-                            <img src="{% static 'polls/img/longTshirt.jpg' %}" width="100%" height="100%">
-                            <p class="text">価格：4,300円</p>
-                        </div>
-                        <div class="production">
-                            <p class="text">
-                                <br>
-                                月面着陸<br>
-                            </p>
-                            <img src="{% static 'polls/img/parker.jpg' %}" width="100%" height="100%">
-                            <p class="text">価格：5,300円</p>
+                            <img src="{% static 'polls/img/totobag.jpg' %}" width="100%" height="100%">
+                            <p class="p-text">価格：2,290円</p>
                         </div>
                     </div>
+                    <p class="text element">
+                        ※上記デザインは一例です。<br>
+                        以下購入リンクより、お好きなカラーで<br>
+                        Tシャツ、ロンT、パーカー、トートバック等<br>
+                        ご自由にお選びいただけます。<br>
+                    </p>
                     <div class="link text">
-                        <div class="link text">
-                        <a href="https://utme.uniqlo.com/">購入はこちらから</a>
+                        <a href="https://utme.uniqlo.com/jp/front/market/show?id=716127&locale=ja">購入はこちらから</a>
                     </div>                
                 </div>
             </div>
 
 
-            <div id="Contact" style="padding-top: 100px; padding-bottom: 200px;">
+            <div id="Contact" style="padding-top: 50px; padding-bottom: 200px;">
                 <div class="container" style="padding-top: 100px;">
                     <h1 class="title">Contact</h1>
                     <p class="text element">当バンドへのお問い合わせは下記フォームよりお願い致します</p>
@@ -224,18 +187,18 @@
                             </div>
                             <div class="form-group">
                                 <label>お問い合わせ内容</label>
-                                <textarea class="form-control" id="content" rows="3"></textarea>
+                                <textarea class="form-control" id="content" rows="10"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">送信</button>
-                          </form>   
+                        </form>   
                     </div>
-                    <span id="back">
+                    <div id="back" class="element" style="margin-top: 100px;">
                         <a href="#">
                             <img class="chupakun" src="{% static 'polls/img/chupakun.jpg' %}" 
                             onmouseover="this.src='{% static 'polls/img/rocket.jpg' %}'" 
                             onmouseout="this.src='{% static 'polls/img/chupakun.jpg' %}'" />
                         </a>
-                    </span>
+                    </div>
                                 
                 </div>
             </div>
@@ -243,7 +206,7 @@
         </main>
 
         <footer>
-            <p class="footer"> © 2021 Goatsucker</p>
+            <p class="footer text"> © 2021 Goatsucker</p>
         </footer>
         
       

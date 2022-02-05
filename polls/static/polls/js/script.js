@@ -21,6 +21,7 @@ $(function() {
   $btn.on( 'click', function() {
     if ( ! $nav.hasClass( open ) ) {
       $nav.addClass( open );
+      $('.element').removeClass("is-fadeun")
     } else {
       $nav.removeClass( open );
     }

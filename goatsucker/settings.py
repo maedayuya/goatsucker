@@ -25,7 +25,7 @@ SECRET_KEY = '#qsp*)t2(h#7&i@g%gabwv@8!1_k&^j7n&!!%vm1*zt9-^a%#c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["127.0.0.1", "192.168.0.11"]
 
 
 # Application definition
@@ -124,3 +124,5 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'polls/static'),
 )
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")

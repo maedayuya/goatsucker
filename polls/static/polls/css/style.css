@@ -24,8 +24,9 @@ header {
 }
 .logo{
     color: green;
-    font-size: 50px;
+    font-size: 65px;
     font-family: 'Lobster', cursive;
+	text-align: center;
 }
 .header {
 	float: right;
@@ -40,7 +41,6 @@ header {
 	float: left;
     font-family: 'Bebas Neue', cursive;
 }
-
 /* ハンバーガーメニュー */
 /*============
 nav
@@ -57,7 +57,7 @@ nav {
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	transition: .5s;
-	z-index: 3;
+	z-index: 10001;
   }
   .open nav {
 	left: 0;
@@ -78,7 +78,7 @@ nav {
   nav .inner ul li a {
 	display: block;
 	color: green;
-	font-size: 14px;
+	font-size: 30px;
 	padding: 1em;
 	text-decoration: none;
 	transition-duration: 0.2s;
@@ -86,12 +86,7 @@ nav {
   nav .inner ul li a:hover {
 	background: #e4e4e4;
   }
-  @media screen and (max-width: 767px) {
-	nav {
-	  left: -240px;
-	  width: 240px;
-	}
-  }
+  
   /*============
   @keyframes
   =============*/
@@ -178,7 +173,7 @@ nav {
 	transform: translate(0, 0);
 	transition: all .5s;
 	cursor: pointer;
-	z-index: 3;
+	z-index: 10001;
   }
   .open .toggle_btn {
 	left: 330px;
@@ -224,11 +219,6 @@ nav {
 	transform: translate(0, -10px) rotate(45deg);
 	animation: unset;
   }
-  @media screen and (max-width: 767px) {
-	.open .toggle_btn {
-	  left: 260px;
-	}
-  }
   /*============
   #mask
   =============*/
@@ -244,7 +234,7 @@ nav {
 	height: 100%;
 	background: #000;
 	opacity: .8;
-	z-index: 2;
+	z-index: 10000;
 	cursor: pointer;
 	transition: all .5s;
   }
@@ -253,22 +243,33 @@ nav {
 /* フェードイン */
 .element{
 	/* 最初は非表示 */
-	transform: translateY(30px);
 	opacity: 0;
-	visibility: hidden;
-	transition: transform 1s, opacity 1s, visibility 1s;
+	transition: .7s;
 }
   /* フェードイン時に入るクラス */
   .is-fadein {
-	transform: translateX(0);
 	opacity: 1;
-	visibility: visible;
   }
 /* フェードイン */
 
 main{
 	padding-top: 100px;
 	background-color: #45424A;
+}
+#About {
+	padding-top: 100px;
+}
+#Member {
+	padding-top: 100px;
+}
+#Live {
+	padding-top: 100px;
+}
+#Goods {
+	padding-top: 100px;
+}
+#Contact {
+	padding-top: 100px;
 }
 .title {
     font-family: 'Bebas Neue', cursive;
@@ -282,13 +283,18 @@ main{
 	display: block;
 	background-color: green;
 	height: 5px;
-	width: 1000px;
+	width: 100%;
 	margin: 10px auto;
 }
 .text {
 	text-align: center;
 	padding: 20px;
 	font-size: 30px;
+	color: white;
+}
+.p-text{
+	text-align: center;
+	font-size: 25px;
 	color: white;
 }
 .text-left {
@@ -303,26 +309,18 @@ main{
 }
 
 .production-group {
-	width: 920px;
+	width: 100%;
 	margin: 0 auto;
 	padding: 30px 0 90px;
 }
 .production {
-	width: 300px;
-	height: 300px;
 	background-position: center;
 	background-size: cover;
+	width: 50%;
 	float: left;
-	margin: 200px 10px 0 0;
-}
-.production:nth-child(-n+3) {
-	margin-top: 0;
-}
-.production:nth-child(3n) {
-	margin-right: 0;
+	padding: 0 30px;
 }
 .link{
-	padding-top: 50px;
 	float: right;
 }
 
@@ -330,8 +328,12 @@ label{
 	color: white;
 }
 .form{
-	width: 50%;
+	width: 80%;
 	margin: 0 auto;
+}
+button {
+	width: 30%;
+	float: right;
 }
 
 /* フッター */
@@ -351,3 +353,39 @@ footer {
 
 }
 
+@media screen and (max-width: 767px) {
+	header {
+		width: 100%;
+	}
+ 	.logo{
+		font-size: 50px;
+	}
+	main {
+		width: 100%;
+	}
+	.text {
+		font-size: 20px;
+	}
+	.text-left {
+		font-size: 20px;
+	}	
+	img {
+		width: 100%;
+	}
+	.production {
+		width: 100%;
+	}
+	.content{
+		width: 100%;
+		margin: 0 auto;
+	}	
+	#back {
+		display: none;
+	}	
+	.form{
+		width: 100%;
+	}
+	footer {
+		width: 100%;
+	}
+  }

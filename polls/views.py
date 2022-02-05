@@ -1,12 +1,17 @@
 from django.shortcuts import render
 from .models import Post
-from django.views.generic import TemplateView
+from .models import About
+from .models import Member
 
+from polls import models
 # Create your views here.
 
 def index(request):
-    data = {'data': Post.objects.filter().latest('created_date')}
-    return render(request, 'polls/index.html',data)
+    context = {
+        'data': Post.objects.filter().latest('created_date'),
+        'about' : About.objects.get(id=1),
+        'member' : Member.objects.all()
+    }
+    
+    return render(request, 'polls/index.html',context)
 
-class ContactCreateCompleteView(TemplateView):
-    template_name = 'contact_create_complete.html'
