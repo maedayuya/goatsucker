@@ -31,7 +31,7 @@
                         <ul>
                             <li> <a href="#About">About</a></li>
                             <li> <a href="#Member">Member</a></li>
-                            <li> <a href="#Live">Live</a></li>
+                            <li> <a href="#News">News</a></li>
                             <li> <a href="#Goods">Goods</a></li>
                             <li> <a href="#Contact">Contact</a></li>
                         </ul>
@@ -87,31 +87,24 @@
                 </div>
             </div>
 
-            <div id="Live">
+            <div id="News" style="padding: 100px;">
                 <div class="container">
-                    <h1 class="title">Next Live</h1>
-                    <p class="text element" style="font-weight: bold;">
-                        {{ data.date }}
-                    </p>
-                    <p class="text element" style="font-weight: bold;">
-                        {{ data.title }}
-                    </p>
-                    <p class="text element">
-                        <span>OPEN:</span>{{ data.open }}
-                    </p>
-                    <p class="text element">
-                        <span>START:</span>{{ data.start }}
-                    </p>
-                    <p class="text element">
-                        {{ data.ticket }}
-                    </p>
-                    <p class="text element">
-                        {{ data.place }}
-                    </p>
-                    <p class="text element">
-                        <a href="{{ data.link }}">{{ data.link }}</a>
-                    </p>
-
+                    <h1 class="title">NEWS</h1>
+                    <div style="margin: 0 auto; width: 80%;">
+                            <!-- ◆参考◆ -->
+                        <!-- 高さ(px)                 data-width="**" -->
+                        <!-- 幅(px)                   data-height="**" -->
+                        <!-- Darkモード               data-theme="dark" -->
+                        <!-- リンクの色               data-link-color="#**" -->
+                        <!-- 境界線の色               data-border-color="#**" -->
+                        <!-- ヘッダー非表示           data-chrome="noheader" -->
+                        <!-- フッター非表示           data-chrome="nofooter" -->
+                        <!-- 境界線を消す             data-chrome="noborders" -->
+                        <!-- スクロールバーを非表示   data-chrome="noscrollbar" -->
+                        <!-- 背景を透明               data-chrome="transparent" -->
+                        <a class="twitter-timeline" data-theme="" data-width="" data-height="800" data-chrome="noheader nofooter noborders" href="https://twitter.com/Goatsucker_2828?ref_src=twsrc%5Etfw">Tweets by Goatsucker_2828</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
                 </div>
             </div>
 
@@ -123,41 +116,15 @@
                     </p>
 
                     <div class="production-group clearfix element">
+                        {% for item in goods %}
                         <div class="production">
                             <p class="p-text">
-                                <br>
-                                チュパおTシャツ（黒）<br>
+                                {{ item.title }}
                             </p>
-                            <img src="{% static 'polls/img/tshirt1.jpg' %}" width="100%" height="100%">
-                            <p class="p-text">価格：3,290円</p>
+                            <img src="{{ item.image.url }}" width="100%" height="100%">
+                            <p class="p-text">価格：{{ item.price }}円</p>
                         </div>
-                        <div class="production">
-                            <p class="p-text">
-                                <br>
-                                チュパ子Tシャツ（黒）<br>
-                            </p>
-                            <img src="{% static 'polls/img/tshirt2.jpg' %}" width="100%" height="100%">
-                            <p class="p-text">価格：3,290円</p>
-                        </div>
-                        <div class="production">
-                            <p class="p-text">
-                                <br>
-                                チュパおとチュパ子<br>
-                                Tシャツ（黒）<br>
-                            </p>
-                            <img src="{% static 'polls/img/tshirt3.jpg' %}" width="100%" height="100%">
-                            <p class="p-text">価格：3,290円</p>
-                        </div>
-                        <div class="production">
-                            <p class="p-text">
-                                <br>
-                                チュパおとチュパ子<br>
-                                ミニトート<br>
-                            </p>
-                            <img src="{% static 'polls/img/totobag.jpg' %}" width="100%" height="100%">
-                            <p class="p-text">価格：2,290円</p>
-                        </div>
-                    </div>
+                        {% endfor %}
                     <p class="text element">
                         ※上記デザインは一例です。<br>
                         以下購入リンクより、お好きなカラーで<br>
@@ -174,24 +141,16 @@
             <div id="Contact" style="padding-top: 50px; padding-bottom: 200px;">
                 <div class="container" style="padding-top: 100px;">
                     <h1 class="title">Contact</h1>
-                    <p class="text element">当バンドへのお問い合わせは下記フォームよりお願い致します</p>
-                    <div class="form element">
-                        <form>
-                            <div class="form-group">
-                                <label>氏名</label>
-                                <input type="text" class="form-control" id="name" placeholder="氏名">
-                            </div>
-                            <div class="form-group">
-                              <label>メールアドレス</label>
-                              <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="メールアドレス">
-                            </div>
-                            <div class="form-group">
-                                <label>お問い合わせ内容</label>
-                                <textarea class="form-control" id="content" rows="10"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">送信</button>
-                        </form>   
-                    </div>
+                    <p class="text element">
+                        当バンドへのお問い合わせは下記メールアドレスまでお願い致します
+                    </p>
+
+                    <p style="text-align: center;">
+                    <a class="text element" href="mailto:goatsuckerofficial@gmail.com">
+                        goatsuckerofficial@gmail.com
+                    </a>
+                    </p>
+
                     <div id="back" class="element" style="margin-top: 100px;">
                         <a href="#">
                             <img class="chupakun" src="{% static 'polls/img/chupakun.jpg' %}" 
