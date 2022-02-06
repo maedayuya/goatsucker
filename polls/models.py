@@ -28,3 +28,8 @@ class Member(models.Model):
     profile = models.TextField(max_length=200)
     link = models.CharField(max_length=200)
 
+class Goods(models.Model):
+    image = models.ImageField(upload_to='media/')
+    title = models.CharField(max_length=200)
+    price = models.IntegerField(max_length=200)
+

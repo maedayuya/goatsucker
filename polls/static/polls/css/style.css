@@ -262,7 +262,7 @@ main{
 #Member {
 	padding-top: 100px;
 }
-#Live {
+#News {
 	padding-top: 100px;
 }
 #Goods {
@@ -296,6 +296,7 @@ main{
 	text-align: center;
 	font-size: 25px;
 	color: white;
+	width: 8em;
 }
 .text-left {
 	text-align: left;
